@@ -72,11 +72,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular_issue_repro:build:production"
+              "buildTarget": "angular_issue_repro:build:production"
             },
             "development": {
-              "browserTarget": "angular_issue_repro:build:development",
-              "proxyConfig": "proxy.conf.js"
+              "proxyConfig": "proxy.conf.js",
+              "buildTarget": "angular_issue_repro:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular_issue_repro:build"
+            "buildTarget": "angular_issue_repro:build"
           }
         },
         "test": {
